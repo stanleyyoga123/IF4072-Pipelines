@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+bin/lang-detection
+bin/model
+bin/model-nmt
