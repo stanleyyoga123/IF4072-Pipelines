@@ -47,7 +47,7 @@ def LanguageDemo(pipeline, runtime):
         stop = datetime.now()
         st.write(f"Language: {language}")
         if runtime:
-            st.write(f"Time Taken: {timestamp(stop - start - start)} ms")
+            st.write(f"Time Taken: {timestamp(stop - start)} ms")
 
 
 def MachineTranslationDemo(pipeline, runtime):
@@ -119,10 +119,10 @@ if __name__ == "__main__":
     }
     val_runtime = runtime_map[runtime]
     if option == "All":
-        MainDemo(pipelines, runtime_map)
+        MainDemo(pipelines, val_runtime)
     elif option == "Language Detection":
-        LanguageDemo(pipelines["lang"], runtime_map)
+        LanguageDemo(pipelines["lang"], val_runtime)
     elif option == "Machine Translation":
-        MachineTranslationDemo(pipelines["translate"], runtime_map)
+        MachineTranslationDemo(pipelines["translate"], val_runtime)
     elif option == "Sentiment Analysis":
-        SentimentDemo(pipelines["sentiment"], runtime_map)
+        SentimentDemo(pipelines["sentiment"], val_runtime)
